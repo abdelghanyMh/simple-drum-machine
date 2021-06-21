@@ -1,0 +1,76 @@
+$media-mobile: "only screen and (max-width : 600px)"
+$main-color: azure
+
+*
+    margin: 0px
+    padding: 0px
+
+body
+    background: #03071E
+    #root
+        min-width: 1042px
+        min-height: 100%
+        margin-top: 2%
+    #drum-machine
+        grid-template-areas: "advert content"
+
+        background: #370617
+        border-radius: 14px
+        max-width: 60%
+        min-height: 100%
+        display: grid
+        grid-template-columns: 50% 50%
+        margin-left: auto
+        margin-right: auto
+        .pad-bank
+            grid-area: advert
+            display: grid
+            grid-gap: 10px
+            margin: 50px
+            padding: 20px
+            grid-template-columns: repeat(3, 70px)
+            grid-template-rows: repeat(3,50px)
+            width: fit-content
+            overflow: auto
+            button
+                color: aquamarine
+                background-color: Transparent
+                background-repeat: no-repeat
+                border: 2px solid
+                border-radius: 14px
+                cursor: pointer
+                overflow: hidden
+                outline: none
+
+        #display
+            align-self: center
+            color: $main-color
+            grid-area: content
+@media (max-width: 600px)
+    body
+        margin: 0px
+        padding: 0px
+        #root
+            min-width: 100vw
+            min-height: 100vh
+            #drum-machine
+                border-radius: 0px
+                margin: 0px
+                padding: 0px
+                min-width: 100vw
+                min-height: 100vh
+                font-size: 1.5rem
+                align-items: center
+                justify-items: center
+                grid-template-columns: 100vw
+                grid-template-areas: "advert" "content"
+                .pad-bank
+                    padding: 0px
+                    width: -webkit-fill-available
+                    height: -webkit-fill-available
+                    grid-gap: 31px
+                    margin: 10px 10px
+                    justify-content: center
+                    button
+                        width: 72px
+                        height: 72px
